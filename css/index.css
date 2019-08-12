@@ -34,6 +34,22 @@ h3 {
   margin: 0 auto;
 }
 /* ========== CARD ========== */
+.card {
+  background-color: #eee;
+  outline: 1px solid black;
+  padding: 15px;
+}
+.card-text {
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+.card-button {
+  height: 30px;
+  width: 130px;
+  border-radius: 3px;
+  border: 1px solid black;
+  outline: none;
+}
 
 /* ========== HEADER ========== */
 nav .logo {
@@ -92,6 +108,11 @@ nav .logo {
 .top-content img {
   visibility: collapse;
 }
+
+.top-content.services {
+  width: 92vw;
+  margin: 0 auto;
+}
 /* ========== MAIN ========== */
 .middle-content {
   border-top: 2px solid black;
@@ -145,7 +166,11 @@ nav .logo {
   .nav-links a:first-child {
     border: none;
   }
-
+  .top-content.services h2 {
+    font-size: 2em;
+    margin-right: auto;
+    text-align: left;
+  }
   /* ========== MAIN ========== */
   .middle-content article {
     display: flex;
@@ -168,6 +193,12 @@ nav .logo {
   .middle-content article section:last-child {
     padding-left: 2%;
     padding-right: 0;
+  }
+  .middle-content.services article section {
+    flex: 1 0 50%;
+  }
+  .middle-content.services article section {
+    padding: 2%;
   }
 }
 /* ========== DESKTOP MEDIA QUERIES ========== */
@@ -212,6 +243,13 @@ nav .logo {
   .top-content img {
     visibility: visible;
   }
+  .top-content.services {
+    flex-direction: column-reverse;
+  }
+  .top-content.services div,
+  .top-content.services img {
+    width: 100%;
+  }
   /* ========== MAIN ========== */
   .middle-content article {
     display: flex;
@@ -220,5 +258,8 @@ nav .logo {
   }
   .middle-content article section {
     flex: 1 0 33.3333%;
+  }
+  .middle-content.services article section {
+    flex: 1 0 50%;
   }
 }
