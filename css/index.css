@@ -143,6 +143,20 @@ nav .logo {
   color: black;
   text-decoration: none;
 }
+.bottom-content.services img {
+  visibility: collapse;
+  height: 0;
+}
+.bottom-content.services ul {
+  list-style: none;
+}
+.bottom-content.services li {
+  margin: 25px 0 0 10px;
+  padding-left: 10px;
+}
+.bottom-content.services li::marker {
+  content: "◾";
+}
 .copyright {
   text-align: center;
   padding: 35px 0 0 0;
@@ -194,11 +208,14 @@ nav .logo {
     padding-left: 2%;
     padding-right: 0;
   }
-  .middle-content.services article section {
-    flex: 1 0 50%;
+  .middle-content.services {
+    padding: 1% 0;
   }
   .middle-content.services article section {
-    padding: 2%;
+    flex: 0 0 48%;
+  }
+  .middle-content.services article section {
+    padding: 2% 0;
   }
 }
 /* ========== DESKTOP MEDIA QUERIES ========== */
@@ -259,7 +276,18 @@ nav .logo {
   .middle-content article section {
     flex: 1 0 33.3333%;
   }
-  .middle-content.services article section {
-    flex: 1 0 50%;
+  /* ========== MAIN ========== */
+  .bottom-content.services section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .bottom-content.services section div {
+    flex: 0 0 48%;
+  }
+  .bottom-content.services img {
+    visibility: visible;
+    height: initial;
+    width: 100%;
   }
 }
